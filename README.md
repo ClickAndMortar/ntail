@@ -43,3 +43,7 @@ npm dev
 make build
 make push
 ```
+
+## Enhancements
+
+- [ ] Allow adding tags in JSON output per file pattern in config
