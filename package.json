@@ -1,0 +1,30 @@
+{
+  "name": "ntail",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ClickAndMortar/ntail"
+  },
+  "author": "Michael BOUVY",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ClickAndMortar/ntail/issues"
+  },
+  "homepage": "https://github.com/ClickAndMortar/ntail#readme",
+  "dependencies": {
+    "glob": "^7.1.6",
+    "lodash": "^4.17.19",
+    "node-grok": "^2.0.3",
+    "tail": "^2.0.4",
+    "yaml": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
