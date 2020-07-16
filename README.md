@@ -27,6 +27,17 @@ docker run \
   clickandmortar/ntail
 ```
 
+## Configuration
+
+```yaml
+files:
+  - pattern: "/path/to/*.log"
+    # Input log line sample: [2020-07-15 15:00:25] hello ntail
+    format: "^\\[(?<date>[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2})\\] (?<message>.*)$"
+    # Output raw log line if regex format does not match
+    fallback: true
+```
+
 ## Development
 
 ```shell script
