@@ -35,7 +35,7 @@ npm install
 npm dev
 ```
 
-⚠️ Application currently does not restart on config file change.
+⚠️  Application currently does not restart on config file change.
 
 ## Building Docker image
 
@@ -47,3 +47,4 @@ make push
 ## Enhancements
 
 - [ ] Allow adding tags in JSON output per file pattern in config
+- [ ] Restart app in development mode when YAML config changes
