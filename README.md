@@ -38,12 +38,17 @@ files:
     fallback: true
 ```
 
+### `Format` property
+
+* This property may be an array of regexes, output of the first one matching will be used
+* Escape character (`\`) needs to be escaped in the YAML config (`\\`)
+
 ## Development
 
 ```shell script
 cp config.dist.yaml config.yaml
 npm install
-npm dev
+npm run dev
 ```
 
 ⚠️  Application currently does not restart on config file change.

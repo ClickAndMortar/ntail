@@ -31,12 +31,24 @@ let watchedFiles = [];
 
 let watchFile = (path, format, fallback = false) => {
     tails[path] = new Tail(path);
-    regexes[path] = new RegExp(format, 'i');
+    regexes[path] = [];
+    if (typeof format === 'string') {
+        regexes[path].push(new RegExp(format, 'i'));
+    } else {
+        regexes[path] = format.map((fmt) => {
+            return new RegExp(fmt, 'i');
+        });
+    }
 
     tails[path].on('line', (line) => {
-        let data = regexes[path].exec(line);
-        if (data !== null) {
-            console.log(JSON.stringify(data.groups));
+        let data = null;
+
+        for (let regex of regexes[path]) {
+            data = regex.exec(line);
+            if (data !== null) {
+                console.log(JSON.stringify(data.groups));
+                break;
+            }
         }
 
         if (data === null && fallback === true) {
