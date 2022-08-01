@@ -30,7 +30,7 @@ let regexes = {};
 let watchedFiles = [];
 
 let watchFile = (path, format, fallback = false) => {
-    tails[path] = new Tail(path);
+    tails[path] = new Tail(path, { useWatchFile: true, logger: log });
     regexes[path] = [];
     if (typeof format === 'string') {
         regexes[path].push(new RegExp(format, 'i'));
