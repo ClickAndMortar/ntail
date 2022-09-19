@@ -18,13 +18,12 @@
   },
   "homepage": "https://github.com/ClickAndMortar/ntail#readme",
   "dependencies": {
-    "glob": "^7.1.6",
-    "lodash": "^4.17.19",
-    "node-grok": "^2.0.3",
-    "tail": "^2.0.4",
-    "yaml": "^1.10.0"
+    "glob": "^8.0.3",
+    "lodash": "^4.17.21",
+    "tail": "^2.2.4",
+    "yaml": "^1.10.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.20"
   }
 }
